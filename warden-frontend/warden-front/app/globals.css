@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Ant Design Pagination Styles */
+.custom-pagination .ant-pagination-item {
+  @apply border-gray-300 rounded-lg;
+}
+
+.custom-pagination .ant-pagination-item:hover {
+  @apply border-blue-500;
+}
+
+.custom-pagination .ant-pagination-item-active {
+  @apply bg-blue-600 border-blue-600;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+  @apply text-white;
+}
+
+.custom-pagination .ant-pagination-prev,
+.custom-pagination .ant-pagination-next {
+  @apply border-gray-300 rounded-lg;
+}
+
+.custom-pagination .ant-pagination-prev:hover,
+.custom-pagination .ant-pagination-next:hover {
+  @apply border-blue-500 text-blue-500;
+}
+
+.custom-pagination .ant-pagination-jump-prev,
+.custom-pagination .ant-pagination-jump-next {
+  @apply text-gray-500;
+}
+
+.custom-pagination .ant-pagination-options {
+  @apply hidden;
+}
